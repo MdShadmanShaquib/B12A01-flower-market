@@ -1,8 +1,9 @@
 * {
     margin: 0;
     padding: 0;
-    /* overflow-x: hidden; */
 }
+
+/* colour setup for font, background and button */
 
 .bg-clr {
     background-color: #f5f8ff;
@@ -20,18 +21,26 @@
     background-color: #E95A08;
 }
 
+.btn-primary:hover{
+    background-color: #a208b6;
+    color: white;
+    cursor: pointer;
+}
+
+/* font-setup */
+
 .font-noto {
     font-family: "Noto Serif", serif;
     font-optical-sizing: auto;
     font-style: normal;
 }
 
-
 .font-inter {
     font-family: "Inter", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
 }
+
 
 /* header starts */
 .navbar {
@@ -77,7 +86,9 @@
 /* header Ends */
 
 /* Main */
+
 /* section our-plants starts */
+
 .our-plants {
     max-width: 1140px;
     margin: 0 auto;
@@ -128,12 +139,17 @@
     height: 50px;
     color: white;
     font-size: 1rem;
-    font-weight: 600;
+    font-weight: 400;
 }
 
 .our-plants-cards img {
     max-width: 100%;
 }
+
+
+/* section our-plants ends */
+
+/* section flower-lover starts */
 
 .lover-badge {
     max-width: 1140px;
@@ -183,7 +199,9 @@
     padding-top: 20px;
 }
 
+/* section flower-lover ends */
 
+/* section latest-deals starts */
 
 .latest-deals {
     max-width: 1140px;
@@ -308,13 +326,16 @@
     max-height: 100%;
 }
 
+/* section latest-deals ends */
+
+/* section newsletter starts */
+
 .join-section {
     background-image: url(/assets/news-letter-bg.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    width: 100vw;
-    height: 533px;
+    width: 100%;
 }
 
 .join-info-title h1 {
@@ -325,7 +346,7 @@
 }
 
 .join-info {
-    padding-top: 199px;
+    padding: 193px 0px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -344,6 +365,7 @@
 .join-info-input input {
     flex: 1;
     padding-left: 20px;
+    font-size: 1rem;
 }
 
 .join-info-input button {
@@ -351,7 +373,12 @@
     max-width: 186px;
     width: 100%;
     color: white;
+    font-size: 1rem;
 }
+
+/* section newsletter ends  */
+
+/* section footer starts  */
 
 .footer {
     display: flex;
@@ -407,10 +434,13 @@
 
 }
 
+/* section footer ends  */
 
 /* media query for mobile device */
 
 @media screen and (max-width: 576px) {
+
+    /* header */
     .navbar {
         padding: 13px 16px 0px 16px;
     }
@@ -427,14 +457,6 @@
         display: none;
     }
 
-    br {
-        display: none;
-    }
-
-    .hero-container{
-        margin: 0px 17px;
-    }
-
     .banner {
         flex-direction: column-reverse;
         margin: 0px;
@@ -442,8 +464,39 @@
         gap: 28px;
     }
 
-    .our-plants-content{
+    .hero-container {
+        margin: 0px 17px;
+    }
+
+    .hero-title {
+        font-size: 1.5rem;
+        padding-bottom: 13px;
+    }
+
+    .hero-subtitle {
+        font-size: 0.875rem;
+    }
+
+
+    /* section our-plants */
+    .our-plants {
+        margin-top: 65px;
+    }
+
+    .our-plants-content {
         margin: 0px 28px;
+    }
+
+    .our-plants-content h1 {
+        font-size: 1.5rem;
+    }
+
+    .our-plants-content p {
+        font-size: 0.875rem;
+    }
+
+    .our-plants-content p br {
+        display: none;
     }
 
     .our-plants-cards {
@@ -451,14 +504,31 @@
         margin: 0px 17px 0px 14px;
     }
 
-    .our-plants {
-        margin-top: 65px;
+    .plants-cards h3,
+    p,
+    button {
+        font-size: 1rem;
     }
 
+
+
+    /* section lover-badge */
     .lover-badge {
         flex-direction: column;
         margin: 41px 15px 0px 17px;
         gap: 18px;
+    }
+
+    .lover-badge-content h1 {
+        font-size: 1.5rem;
+    }
+
+    .lover-badge-content h1 br {
+        display: none;
+    }
+
+    .lover-badge-content li {
+        font-size: 0.875rem;
     }
 
     .lover-badge-img {
@@ -469,10 +539,32 @@
         display: none;
     }
 
-    .latest-deals-content{
-        margin: 0px 28px;
+
+
+    /* section latest-deals */
+    .latest-deals {
+        margin-bottom: 40px;
     }
+
+    .latest-deals-content {
+        margin: 0px 28px;
+        padding-bottom: 51px;
+    }
+
+    .latest-deals-content h1 {
+        font-size: 1.5rem;
+    }
+
+    .latest-deals-content p {
+        font-size: 0.875rem;
+    }
+
+    .latest-deals-content p br {
+        display: none;
+    }
+
     .latest-deals-cards {
+        margin: 0;
         flex-direction: column;
     }
 
@@ -481,14 +573,49 @@
         margin: 0px 17px 0px 14px;
     }
 
+    .left-cards p {
+        font-size: 1.25rem;
+        padding-bottom: 26px;
+    }
+
+    .left-cards a {
+        font-size: 1rem;
+    }
+
     .right-cards {
         text-align: center;
         margin: 0px 17px 0px 14px;
     }
 
+    .right-cards p {
+        font-size: 1.25rem;
+        padding-bottom: 26px;
+    }
+
+    .right-cards a {
+        font-size: 1rem;
+    }
+
+
+
+    /* section newsletter */
+    .join-info {
+        padding: 110px 36px 60px 36px;
+    }
+
+    .join-info-title h1 {
+        font-size: 1.25rem;
+    }
+
+
+    /* section footer */
     .footer {
         flex-direction: column;
         margin: 50px 20px;
         gap: 20px;
+    }
+
+    .footer-one p {
+        font-size: 1rem;
     }
 }
